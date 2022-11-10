@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cookies</title>
+    </head>
+</html>
+
+<body>
+    <h1>Cookies</h1>
+    <form action="" name="myform" method="POST">
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        <input type="button" value="Set Cookies" name="set" onclick = "setCookies()"> 
+        <input type="button" value="Get Cookies" name="get" onmouseover = "getCookies()"> 
+    </form>
+<script>
+    function setCookies(){
+        document.cookie = "name=" + document.myform.name.value;
+        document.cookie = "email=" + document.myform.email.value;
+        }
+    function getCookies(){
+        var cookiesArray = document.cookie.split(";");
+         alert(cookiesArray);
+        }
+</script>
+</body>
